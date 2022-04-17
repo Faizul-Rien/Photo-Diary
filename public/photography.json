@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "img": "https://www.alfaazphotography.com/wp-content/uploads/2019/10/How-to-find-right-Indian-Wedding-Photographer-0028.jpg",
+    "name": "Wedding Photography",
+    "price": 20000,
+    "rating": 4.7,
+    "description": "Wedding photography is the photography of activities relating to weddings. It encompasses photographs of the couple before marriage as well as coverage of the wedding and reception."
+  },
+  {
+    "id": 2,
+    "img": "https://karenmorneauphotography.com/wp-content/uploads/2018/02/18-5681-page/Q59A8685(pp_w2000_h1333).jpg",
+    "name": "Birthday Photography",
+    "price": 10000,
+    "rating": 4.5,
+    "description": "When you are young, one of the most special days of the year is your birthday.Being creative and flexible is the best way to catch memorable birthday images."
+  },
+  {
+    "id": 3,
+    "img": "https://www.richardbollphotography.com/wp18/wp-content/uploads/2022/01/1I5A3988-Merchant-Cantos_Numis-Copyright-Richard-Boll_RBP.jpg",
+    "name": "Corporate Photography",
+    "price": 18000,
+    "rating": 4.5,
+    "description": "Corporate photography is anything that involves photography that's related to promoting a company's product and services."
+  },
+  {
+    "id": 4,
+    "img": "https://www.jdinstitute.edu.in/media/2019/03/Fashion-Photography-1.jpg",
+    "name": "Fashion Photography",
+    "price": 20000,
+    "rating": 5,
+    "description": "Fashion photographers are responsible for how clothing is presented in advertising campaigns, catalogues and fashion magazines."
+  },
+  {
+    "id": 5,
+    "img": "https://kool-group-web-portal-assets.s3.eu-west-2.amazonaws.com/action.jpg",
+    "name": "Videography",
+    "price": 25000,
+    "rating": 4.6,
+    "description": "Videography refers to the process of capturing moving images on electronic media and even streaming media."
+  },
+  {
+    "id": 6,
+    "img": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201909/Tapan_Basu.jpeg?y5mqEHRhHKFH4aOeD2W80DfbOwRfbKla&size=770:433.jpg",
+    "name": "Cinematography",
+    "price": 25000,
+    "rating": 4.4,
+    "description": "cinematography, the art and technology of motion-picture photography. It involves such techniques as the general composition of a scene."
+  }
+]
