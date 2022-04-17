@@ -1,5 +1,17 @@
-.service-container {
-  display: grid;
-  grid-template-columns: repeat(3 1fr);
-  grid-gap: 20px;
+.text-d {
+  font-size: 10px;
+}
+.rating {
+  font-size: 12px;
+}
+.ratings {
+  font-size: 13px;
+  font-weight: 700;
+}
+.star {
+  color: goldenrod;
+}
+.service-box {
+  margin: auto;
+  margin-bottom: 20px;
 }
