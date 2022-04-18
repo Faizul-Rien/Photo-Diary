@@ -22,7 +22,7 @@ const Header = () => {
     >
       <Container>
         <Navbar.Brand as={Link} to="/home">
-          Photo Diary
+         Rien'S Photo Diary
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
