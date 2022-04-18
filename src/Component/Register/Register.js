@@ -2,9 +2,10 @@ import { Button, Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
+import SocialSite from "./SocialSite/SocialSite";
 
 const Register = () => {
-  const [createUserWithEmailAndPassword, user, loading, error] =
+  const [createUserWithEmailAndPassword, user, error] =
     useCreateUserWithEmailAndPassword(auth);
 
   const nevigate = useNavigate();
@@ -68,9 +69,10 @@ const Register = () => {
           </Link>
         </p>
         <Button variant="primary" type="submit" value="Register">
-          Submit
+          Register
         </Button>
       </Form>
+      <SocialSite></SocialSite>
     </div>
   );
 };
