@@ -3,9 +3,16 @@ import { Button, Card } from "react-bootstrap";
 import "./Service.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const Service = ({ service }) => {
-  const { img, name, price, description, rating } = service;
+  const { id, img, name, price, description, rating } = service;
+  const nevigate = useNavigate();
+
+  const handleCheckOut = (id) => {
+    nevigate(`/checkout/${id}`);
+  };
+
   return (
     <div className="service-box">
       <Card style={{ width: "380px" }}>
@@ -21,7 +28,9 @@ const Service = ({ service }) => {
             {rating}{" "}
             <FontAwesomeIcon className="star" icon={faStar}></FontAwesomeIcon>
           </p>
-          <Button variant="success">Check out</Button>
+          <Button onClick={() => handleCheckOut(id)} variant="success">
+            Check out
+          </Button>
         </Card.Body>
       </Card>
     </div>
