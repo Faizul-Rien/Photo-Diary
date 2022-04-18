@@ -1,12 +1,15 @@
-import React, { useRef } from "react";
+import React, { useRef} from "react";
 import { Button, Form } from "react-bootstrap";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 
 const Login = () => {
-  const [signInWithEmailAndPassword, user, loading, error] =
+  const [signInWithEmailAndPassword, user] =
     useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(
+      auth
+    );
   const emailRef = useRef("");
 
   const passwordRef = useRef("");
@@ -19,12 +22,14 @@ const Login = () => {
   if (user) {
     nevigate(from, { replace: true });
   }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
 
     signInWithEmailAndPassword(email, password);
+    sendPasswordResetEmail(email)
   };
 
   const nevigateRegister = (event) => {
@@ -66,8 +71,8 @@ const Login = () => {
             Please Register Here
           </Link>
         </p>
-        <Button variant="primary" type="submit">
-          Login
+        <Button className="text-decoration-none" variant="link">Forget password?</Button><br />
+        <Button variant="primary" type="submit">Login
         </Button>
       </Form>
     </div>

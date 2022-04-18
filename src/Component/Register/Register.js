@@ -1,12 +1,13 @@
 import { Button, Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useCreateUserWithEmailAndPassword,} from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import SocialSite from "./SocialSite/SocialSite";
 
 const Register = () => {
-  const [createUserWithEmailAndPassword, user, error] =
-    useCreateUserWithEmailAndPassword(auth);
+  const [createUserWithEmailAndPassword, user] =
+    useCreateUserWithEmailAndPassword(auth, {sendEmailVerification:true});
+
 
   const nevigate = useNavigate();
 
@@ -19,13 +20,11 @@ const Register = () => {
   }
   const handleRegister = (event) => {
     event.preventDefault();
-    // console.log(event.target.email.value);
-    const name = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
 
     createUserWithEmailAndPassword(email, password);
-  };
+  }
   return (
     <div className="container w-50 mx-auto">
       <h2 className="text-center mt-5">Register</h2>
